@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Data", "Catharsium.Cooking.Data\Catharsium.Cooking.Data.csproj", "{48ADB7DE-2739-46F9-9C30-DCB6CEA5BDE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Entities", "Catharsium.Cooking.Entities\Catharsium.Cooking.Entities.csproj", "{289BD6A4-38BB-4EE2-8A5B-1BF1C36A8799}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Terminal", "Catharsium.Cooking.Terminal\Catharsium.Cooking.Terminal.csproj", "{637991F7-88D4-4EEE-8EF8-05CC3274A902}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Terminal.Tests", "Catharsium.Cooking.Terminal.Tests\Catharsium.Cooking.Terminal.Tests.csproj", "{D7C308D7-9E47-464A-A248-4F0CDC952539}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Data.Tests", "Catharsium.Cooking.Data.Tests\Catharsium.Cooking.Data.Tests.csproj", "{AF986702-DCE1-4D0A-BCF5-B689C55D3703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catharsium.Cooking.Entities.Tests", "Catharsium.Cooking.Entities.Tests\Catharsium.Cooking.Entities.Tests.csproj", "{266E060D-3330-4C08-A3CF-66B9D229EF10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48ADB7DE-2739-46F9-9C30-DCB6CEA5BDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48ADB7DE-2739-46F9-9C30-DCB6CEA5BDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48ADB7DE-2739-46F9-9C30-DCB6CEA5BDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48ADB7DE-2739-46F9-9C30-DCB6CEA5BDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{289BD6A4-38BB-4EE2-8A5B-1BF1C36A8799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{289BD6A4-38BB-4EE2-8A5B-1BF1C36A8799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{289BD6A4-38BB-4EE2-8A5B-1BF1C36A8799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{289BD6A4-38BB-4EE2-8A5B-1BF1C36A8799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637991F7-88D4-4EEE-8EF8-05CC3274A902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637991F7-88D4-4EEE-8EF8-05CC3274A902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637991F7-88D4-4EEE-8EF8-05CC3274A902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637991F7-88D4-4EEE-8EF8-05CC3274A902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C308D7-9E47-464A-A248-4F0CDC952539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C308D7-9E47-464A-A248-4F0CDC952539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C308D7-9E47-464A-A248-4F0CDC952539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C308D7-9E47-464A-A248-4F0CDC952539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF986702-DCE1-4D0A-BCF5-B689C55D3703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF986702-DCE1-4D0A-BCF5-B689C55D3703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF986702-DCE1-4D0A-BCF5-B689C55D3703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF986702-DCE1-4D0A-BCF5-B689C55D3703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266E060D-3330-4C08-A3CF-66B9D229EF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266E060D-3330-4C08-A3CF-66B9D229EF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266E060D-3330-4C08-A3CF-66B9D229EF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266E060D-3330-4C08-A3CF-66B9D229EF10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81125BF4-3781-48A2-99F1-9672A5BF5824}
+	EndGlobalSection
+EndGlobal
