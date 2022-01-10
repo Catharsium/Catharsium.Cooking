@@ -15,4 +15,9 @@
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Catharsium.Cooking.Data\Catharsium.Cooking.Data.csproj" />
+    <ProjectReference Include="..\Catharsium.Cooking.Entities\Catharsium.Cooking.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
