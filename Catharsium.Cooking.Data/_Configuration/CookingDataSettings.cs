@@ -2,4 +2,5 @@
 
 public class CookingDataSettings
 {
+    public Dictionary<string, string> FileSystemRepository { get; set; }
 }

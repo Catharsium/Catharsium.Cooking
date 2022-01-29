@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Terminal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Data.Tests", "Catharsium.Cooking.Data.Tests\Catharsium.Cooking.Data.Tests.csproj", "{AF986702-DCE1-4D0A-BCF5-B689C55D3703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catharsium.Cooking.Entities.Tests", "Catharsium.Cooking.Entities.Tests\Catharsium.Cooking.Entities.Tests.csproj", "{266E060D-3330-4C08-A3CF-66B9D229EF10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.Cooking.Entities.Tests", "Catharsium.Cooking.Entities.Tests\Catharsium.Cooking.Entities.Tests.csproj", "{266E060D-3330-4C08-A3CF-66B9D229EF10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{835E26E0-1E84-48EF-A8E8-6C6DF112C5A8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Software\Catharsium.Cooking\appsettings.json = ..\..\..\Software\Catharsium.Cooking\appsettings.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

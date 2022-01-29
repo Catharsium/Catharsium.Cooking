@@ -1,5 +1,5 @@
 ﻿using Catharsium.Cooking.Data._Configuration;
-using Catharsium.Util.IO.Interfaces;
+using Catharsium.Util.IO.Files.Interfaces;
 using Catharsium.Util.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

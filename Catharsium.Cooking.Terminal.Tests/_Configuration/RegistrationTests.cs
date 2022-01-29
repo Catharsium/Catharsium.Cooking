@@ -1,5 +1,10 @@
-﻿using Catharsium.Cooking.Terminal._Configuration;
-using Catharsium.Util.IO.Console.Interfaces;
+﻿using Catharsium.Cooking.Data._Configuration;
+using Catharsium.Cooking.Terminal._Configuration;
+using Catharsium.Cooking.Terminal.ActionHandlers.Add;
+using Catharsium.Cooking.Terminal.ActionHandlers.List;
+using Catharsium.Cooking.Terminal.Interfaces;
+using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
+using Catharsium.Util.IO.Console.ActionHandlers.Interfaces.Internal;
 using Catharsium.Util.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +22,15 @@ public class RegistrationTests
         var configuration = Substitute.For<IConfiguration>();
 
         serviceCollection.AddCookingTerminal(configuration);
+
+        serviceCollection.ReceivedRegistration<IMenuActionHandler, ListActionHandler>();
+        serviceCollection.ReceivedRegistration<IMenuActionHandler, AddActionHandler>();
+
+        serviceCollection.ReceivedRegistration<IListActionHandler, ListIngredientsActionHandler>();
+
+        serviceCollection.ReceivedRegistration<IAddActionHandler, AddIngredientActionHandler>();
+        serviceCollection.ReceivedRegistration<IAddActionHandler, AddGroceryActionHandler>();
+        serviceCollection.ReceivedRegistration<IAddActionHandler, AddRecipeActionHandler>();
     }
 
 
@@ -27,6 +41,7 @@ public class RegistrationTests
         var configuration = Substitute.For<IConfiguration>();
 
         serviceCollection.AddCookingTerminal(configuration);
-        serviceCollection.ReceivedRegistration<IChooseActionHandler>();
+        serviceCollection.ReceivedRegistration<CookingDataSettings>();
+        serviceCollection.ReceivedRegistration<IMainMenuActionHandler>();
     }
 }

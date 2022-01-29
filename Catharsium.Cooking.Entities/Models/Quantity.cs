@@ -1,4 +1,4 @@
-﻿namespace Catharsium.Cooking.Entities;
+﻿namespace Catharsium.Cooking.Entities.Models;
 
 public class Quantity
 {
