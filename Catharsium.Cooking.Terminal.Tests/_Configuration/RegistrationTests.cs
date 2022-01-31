@@ -1,8 +1,11 @@
 ﻿using Catharsium.Cooking.Data._Configuration;
+using Catharsium.Cooking.Entities.Models;
 using Catharsium.Cooking.Terminal._Configuration;
 using Catharsium.Cooking.Terminal.ActionHandlers.Add;
+using Catharsium.Cooking.Terminal.ActionHandlers.Choosers;
 using Catharsium.Cooking.Terminal.ActionHandlers.List;
-using Catharsium.Cooking.Terminal.Interfaces;
+using Catharsium.Cooking.Terminal.ActionHandlers.Steps;
+using Catharsium.Cooking.Terminal.Interfaces.ActionHandlers;
 using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
 using Catharsium.Util.IO.Console.ActionHandlers.Interfaces.Internal;
 using Catharsium.Util.Testing.Extensions;
@@ -31,6 +34,8 @@ public class RegistrationTests
         serviceCollection.ReceivedRegistration<IAddActionHandler, AddIngredientActionHandler>();
         serviceCollection.ReceivedRegistration<IAddActionHandler, AddGroceryActionHandler>();
         serviceCollection.ReceivedRegistration<IAddActionHandler, AddRecipeActionHandler>();
+
+        serviceCollection.ReceivedRegistration<ISelectionStep<Ingredient>, IngredientSelectionStep>();
     }
 
 
