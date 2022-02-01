@@ -1,24 +1,16 @@
 ﻿using Catharsium.Cooking.Terminal.Interfaces.ActionHandlers;
-using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
+using Catharsium.Util.IO.Console.ActionHandlers.Base;
 using Catharsium.Util.IO.Console.Interfaces;
 namespace Catharsium.Cooking.Terminal.ActionHandlers.Add;
 
-public class AddActionHandler : IMenuActionHandler
+public class AddActionHandler : BaseMenuActionHandler<IAddActionHandler>
 {
-    private readonly IEnumerable<IAddActionHandler> actionHandlers;
-    private readonly IConsole console;
-
-    public string MenuName => "Add";
-
-
     public AddActionHandler(IEnumerable<IAddActionHandler> actionHandlers, IConsole console)
-    {
-        this.actionHandlers = actionHandlers;
-        this.console = console;
-    }
+        : base(actionHandlers, console, "Add")
+    { }
 
 
-    public async Task Run()
+    public override async Task Run()
     {
         var actionHandler = this.console.AskForItem(this.actionHandlers, "What would you like to add?");
         if (actionHandler != null) {

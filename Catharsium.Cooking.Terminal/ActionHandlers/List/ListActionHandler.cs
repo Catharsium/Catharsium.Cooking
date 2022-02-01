@@ -1,24 +1,17 @@
 ﻿using Catharsium.Cooking.Terminal.Interfaces.ActionHandlers;
+using Catharsium.Util.IO.Console.ActionHandlers.Base;
 using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
 using Catharsium.Util.IO.Console.Interfaces;
 namespace Catharsium.Cooking.Terminal.ActionHandlers.List;
 
-public class ListActionHandler : IMenuActionHandler
+public class ListActionHandler : BaseMenuActionHandler<IListActionHandler>, IMenuActionHandler
 {
-    private readonly IEnumerable<IListActionHandler> actionHandlers;
-    private readonly IConsole console;
-
-    public string MenuName => "List";
-
-
     public ListActionHandler(IEnumerable<IListActionHandler> actionHandlers, IConsole console)
-    {
-        this.actionHandlers = actionHandlers;
-        this.console = console;
-    }
+        : base(actionHandlers, console, "List")
+    { }
 
 
-    public async Task Run()
+    public override async Task Run()
     {
         var actionHandler = this.console.AskForItem(this.actionHandlers, "What would you like to see?");
         if (actionHandler != null) {

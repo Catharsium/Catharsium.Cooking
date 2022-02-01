@@ -3,11 +3,11 @@ using Catharsium.Cooking.Entities.Models;
 using Catharsium.Cooking.Terminal._Configuration;
 using Catharsium.Cooking.Terminal.ActionHandlers.Add;
 using Catharsium.Cooking.Terminal.ActionHandlers.Choosers;
+using Catharsium.Cooking.Terminal.ActionHandlers.Edit;
 using Catharsium.Cooking.Terminal.ActionHandlers.List;
 using Catharsium.Cooking.Terminal.ActionHandlers.Steps;
 using Catharsium.Cooking.Terminal.Interfaces.ActionHandlers;
 using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
-using Catharsium.Util.IO.Console.ActionHandlers.Interfaces.Internal;
 using Catharsium.Util.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,8 +26,9 @@ public class RegistrationTests
 
         serviceCollection.AddCookingTerminal(configuration);
 
-        serviceCollection.ReceivedRegistration<IMenuActionHandler, ListActionHandler>();
         serviceCollection.ReceivedRegistration<IMenuActionHandler, AddActionHandler>();
+        serviceCollection.ReceivedRegistration<IMenuActionHandler, EditActionHandler>();
+        serviceCollection.ReceivedRegistration<IMenuActionHandler, ListActionHandler>();
 
         serviceCollection.ReceivedRegistration<IListActionHandler, ListIngredientsActionHandler>();
 
@@ -36,6 +37,7 @@ public class RegistrationTests
         serviceCollection.ReceivedRegistration<IAddActionHandler, AddRecipeActionHandler>();
 
         serviceCollection.ReceivedRegistration<ISelectionStep<Ingredient>, IngredientSelectionStep>();
+        serviceCollection.ReceivedRegistration<ISelectionStep<Quantity>, QuantitySelectionStep>();
     }
 
 

@@ -1,5 +1,5 @@
 ﻿using Catharsium.Cooking.Terminal._Configuration;
-using Catharsium.Util.IO.Console.ActionHandlers.Interfaces.Internal;
+using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 namespace Catharsium.WhatsApp.Terminal;

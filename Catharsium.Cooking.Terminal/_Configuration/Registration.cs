@@ -2,6 +2,7 @@
 using Catharsium.Cooking.Entities.Models;
 using Catharsium.Cooking.Terminal.ActionHandlers.Add;
 using Catharsium.Cooking.Terminal.ActionHandlers.Choosers;
+using Catharsium.Cooking.Terminal.ActionHandlers.Edit;
 using Catharsium.Cooking.Terminal.ActionHandlers.List;
 using Catharsium.Cooking.Terminal.ActionHandlers.Steps;
 using Catharsium.Cooking.Terminal.Interfaces.ActionHandlers;
@@ -22,8 +23,9 @@ public static class Registration
         services.AddCookingData(config);
         services.AddConsoleIoUtilities(config);
 
-        services.AddScoped<IMenuActionHandler, ListActionHandler>();
         services.AddScoped<IMenuActionHandler, AddActionHandler>();
+        services.AddScoped<IMenuActionHandler, EditActionHandler>();
+        services.AddScoped<IMenuActionHandler, ListActionHandler>();
 
         services.AddScoped<IListActionHandler, ListIngredientsActionHandler>();
 
@@ -32,6 +34,7 @@ public static class Registration
         services.AddScoped<IAddActionHandler, AddRecipeActionHandler>();
 
         services.AddScoped<ISelectionStep<Ingredient>, IngredientSelectionStep>();
+        services.AddScoped<ISelectionStep<Quantity>, QuantitySelectionStep>();
 
         return services;
     }

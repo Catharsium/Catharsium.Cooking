@@ -1,25 +1,23 @@
 ﻿using Catharsium.Cooking.Entities.Models;
 using Catharsium.Cooking.Terminal.Interfaces.ActionHandlers;
+using Catharsium.Util.IO.Console.ActionHandlers.Base;
 using Catharsium.Util.IO.Console.Interfaces;
 using Catharsium.Util.IO.Files.Interfaces;
 namespace Catharsium.Cooking.Terminal.ActionHandlers.Add;
 
-public class AddRecipeActionHandler : IAddActionHandler
+public class AddRecipeActionHandler : BaseActionHandler, IAddActionHandler
 {
     private readonly IJsonFileRepository<Recipe> recipeRepository;
-    private readonly IConsole console;
-
-    public string MenuName => "Add recipe";
 
 
     public AddRecipeActionHandler(IJsonFileRepository<Recipe> recipeRepository, IConsole console)
+        : base(console, "Add recipe")
     {
         this.recipeRepository = recipeRepository;
-        this.console = console;
     }
 
 
-    public async Task Run()
+    public override async Task Run()
     {
         var key = "My recipe";
         await this.recipeRepository.Add(new Recipe {
@@ -38,11 +36,5 @@ public class AddRecipeActionHandler : IAddActionHandler
                     }
                 }
         }, key);
-    }
-
-
-    public override string ToString()
-    {
-        return this.MenuName;
     }
 }
