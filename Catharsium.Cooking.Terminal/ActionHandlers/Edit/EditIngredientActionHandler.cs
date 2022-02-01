@@ -5,7 +5,8 @@ namespace Catharsium.Cooking.Terminal.ActionHandlers.Edit;
 
 public class EditIngredientActionHandler : BaseActionHandler, IEditActionHandler
 {
-    public EditIngredientActionHandler(IConsole console) : base(console, "Edit ingredient")
+    public EditIngredientActionHandler(IConsole console)
+        : base(console, "Edit ingredient")
     {
     }
 

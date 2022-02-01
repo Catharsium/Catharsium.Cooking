@@ -1,7 +1,7 @@
 ﻿using Catharsium.Cooking.Entities.Models;
-using Catharsium.Cooking.Terminal.ActionHandlers.Choosers;
 using Catharsium.Cooking.Terminal.Interfaces.ActionHandlers;
 using Catharsium.Util.IO.Console.ActionHandlers.Base;
+using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
 using Catharsium.Util.IO.Console.Interfaces;
 using Catharsium.Util.IO.Files.Interfaces;
 namespace Catharsium.Cooking.Terminal.ActionHandlers.Add;

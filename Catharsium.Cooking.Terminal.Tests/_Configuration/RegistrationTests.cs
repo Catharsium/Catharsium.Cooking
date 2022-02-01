@@ -2,7 +2,6 @@
 using Catharsium.Cooking.Entities.Models;
 using Catharsium.Cooking.Terminal._Configuration;
 using Catharsium.Cooking.Terminal.ActionHandlers.Add;
-using Catharsium.Cooking.Terminal.ActionHandlers.Choosers;
 using Catharsium.Cooking.Terminal.ActionHandlers.Edit;
 using Catharsium.Cooking.Terminal.ActionHandlers.List;
 using Catharsium.Cooking.Terminal.ActionHandlers.Steps;
