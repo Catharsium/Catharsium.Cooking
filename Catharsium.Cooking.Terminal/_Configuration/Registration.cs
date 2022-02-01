@@ -32,8 +32,8 @@ public static class Registration
         services.AddScoped<IAddActionHandler, AddGroceryActionHandler>();
         services.AddScoped<IAddActionHandler, AddRecipeActionHandler>();
 
-        services.AddScoped<ISelectionStep<Ingredient>, IngredientSelectionStep>();
-        services.AddScoped<ISelectionStep<Quantity>, QuantitySelectionStep>();
+        services.AddScoped<ISelectionActionStep<Ingredient>, IngredientSelectionStep>();
+        services.AddScoped<ISelectionActionStep<Quantity>, QuantitySelectionStep>();
 
         return services;
     }

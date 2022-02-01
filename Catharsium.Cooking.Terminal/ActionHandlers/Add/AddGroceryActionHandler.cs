@@ -9,14 +9,14 @@ namespace Catharsium.Cooking.Terminal.ActionHandlers.Add;
 public class AddGroceryActionHandler : BaseActionHandler, IAddActionHandler
 {
     private readonly IJsonFileRepository<Grocery> groceryRepository;
-    private readonly ISelectionStep<Quantity> quantitySelectionStep;
-    private readonly ISelectionStep<Ingredient> ingredientSelectionStep;
+    private readonly ISelectionActionStep<Quantity> quantitySelectionStep;
+    private readonly ISelectionActionStep<Ingredient> ingredientSelectionStep;
 
 
     public AddGroceryActionHandler(
         IJsonFileRepository<Grocery> groceryRepository,
-        ISelectionStep<Quantity> quantitySelectionStep,
-        ISelectionStep<Ingredient> ingredientSelectionStep,
+        ISelectionActionStep<Quantity> quantitySelectionStep,
+        ISelectionActionStep<Ingredient> ingredientSelectionStep,
         IConsole console)
         : base(console, "Add grocery")
     {

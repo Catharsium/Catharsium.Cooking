@@ -35,8 +35,8 @@ public class RegistrationTests
         serviceCollection.ReceivedRegistration<IAddActionHandler, AddGroceryActionHandler>();
         serviceCollection.ReceivedRegistration<IAddActionHandler, AddRecipeActionHandler>();
 
-        serviceCollection.ReceivedRegistration<ISelectionStep<Ingredient>, IngredientSelectionStep>();
-        serviceCollection.ReceivedRegistration<ISelectionStep<Quantity>, QuantitySelectionStep>();
+        serviceCollection.ReceivedRegistration<ISelectionActionStep<Ingredient>, IngredientSelectionStep>();
+        serviceCollection.ReceivedRegistration<ISelectionActionStep<Quantity>, QuantitySelectionStep>();
     }
 
 

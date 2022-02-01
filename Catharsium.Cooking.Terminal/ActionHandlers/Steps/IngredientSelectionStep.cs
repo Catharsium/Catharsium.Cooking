@@ -4,7 +4,7 @@ using Catharsium.Util.IO.Console.Interfaces;
 using Catharsium.Util.IO.Files.Interfaces;
 namespace Catharsium.Cooking.Terminal.ActionHandlers.Steps;
 
-public class IngredientSelectionStep : ISelectionStep<Ingredient>
+public class IngredientSelectionStep : ISelectionActionStep<Ingredient>
 {
     private readonly IJsonFileRepository<Ingredient> ingredientRepository;
     private readonly IConsole console;

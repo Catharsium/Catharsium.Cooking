@@ -3,7 +3,7 @@ using Catharsium.Util.IO.Console.ActionHandlers.Interfaces;
 using Catharsium.Util.IO.Console.Interfaces;
 namespace Catharsium.Cooking.Terminal.ActionHandlers.Steps;
 
-public class QuantitySelectionStep : ISelectionStep<Quantity>
+public class QuantitySelectionStep : ISelectionActionStep<Quantity>
 {
     private readonly IConsole console;
 
